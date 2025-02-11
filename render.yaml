@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: Chainlit-Artisan-Assistant
+    runtime: python
+    repo: https://github.com/AbhishekRP2002/artisan-chatbot
+    plan: free
+    autoDeploy: true
+    region: frankfurt
+    buildCommand: pip install -r requirements.txt
+    startCommand: chainlit run src/app.py -h --port $PORT
